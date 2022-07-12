@@ -1,0 +1,61 @@
+/* 整体容器 */
+.container {
+  width: 1000px;
+  height: 700px;
+  margin: 0 auto;
+  /* 弹性盒子，使内容水平排列 */
+  display: flex;
+}
+
+/* 左上容器 */
+.board {
+  height: 100%;
+  width: 350px;
+}
+
+/* 魔盘容器 */
+.panel {
+  width: 100%;
+  height: 300px;
+  background: url(./images/bg.gif) no-repeat;
+  background-position: center;
+  position: relative;
+}
+/* 魔盘的图片 */
+.panel img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tips p {
+  font-weight: 100;
+  text-align: center;
+}
+
+/* 字典表样式 */
+.dictionary {
+  /* 网格布局 */
+  display: grid;
+  /* 20行，5列 */
+  grid-template: repeat(20, 35px) / repeat(5, 130px);
+  /* 先竖着排列，再横着排 */
+  grid-auto-flow: column;
+}
+
+.dictionary img {
+  height: 30px;
+  /* 垂直方向对齐 */
+  vertical-align: -5px;
+}
+
+.dictionary .number {
+  display: inline-block;
+  width: 40px;
+  /* 对齐方式：右对齐 */
+  text-align: right;
+  /* 和图片有点距离 */
+  margin-right: 10px;
+  font-weight: 100;
+}
